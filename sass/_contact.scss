@@ -1,0 +1,111 @@
+.contact {
+  background-color: $color-middle;
+
+  display: flex;
+  flex-direction: column;
+
+  @include respond(tab-port) {
+   align-items: center;
+   padding:6.5rem 2.5rem;
+  }
+
+
+
+  &__text {
+    &-title {
+        color:$color-middle-text;
+        @include respond(tab-port) {
+          font-size: 2.8rem;
+          line-height: 3.6rem;
+          padding-bottom: 6.5rem;
+        }
+
+    }
+  }
+
+  &__request {
+
+    display: flex;
+
+    @include respond(tab-port) {
+        flex-direction: column;
+       width: 100%;
+       
+       }
+
+    &__consulting {
+
+        @include respond(tab-port) {
+            padding-bottom: 6.5rem;
+          }
+      &-title {
+        color:$color-middle-text;
+        @include respond(tab-port) {
+            font-size: 2.2rem;
+            line-height: 2.8rem;
+          }
+      }
+
+      &-paragraph {
+        color:$color-middle-text;
+
+        @include respond(tab-port) {
+            font-size: 1.6rem;
+            line-height: 2.7rem;
+            padding-bottom: 1.2rem;
+          }
+      }
+
+      &__number {
+
+        display: flex;
+        justify-content: space-between;
+
+        @include respond(tab-port) {
+        
+         width: 80%;
+         
+         }
+        &-n {
+            color:$color-history-choice;
+            @include respond(tab-port) {
+                font-size: 2rem;
+                line-height: 3.2rem;
+              }
+        }
+      }
+    }
+
+    &__question {
+      &__mail {
+        &-title {
+            color:$color-middle-text;
+
+            @include respond(tab-port) {
+                font-size: 2.2rem;
+                line-height: 2.8rem;
+              }
+        }
+
+        &-paragraph {
+            color:$color-middle-text;
+
+            @include respond(tab-port) {
+                font-size: 1.6rem;
+                line-height: 2.7rem;
+                padding-bottom: 1.2rem;
+              }
+        }
+
+        &-send {
+
+            color:$color-history-choice;
+            @include respond(tab-port) {
+                font-size: 2rem;
+                line-height: 3.2rem;
+              }
+        }
+      }
+    }
+  }
+}

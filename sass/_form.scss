@@ -1,0 +1,113 @@
+.form {
+  margin-top: 6.3rem;
+  display: flex;
+padding: 6rem 16rem;
+justify-content: space-between;
+  @include respond(tab-port) {
+    flex-direction: column;
+    padding: 12.5rem 2.5rem;
+  }
+
+  &__section {
+    &__container {
+      &__title {
+        &-call {
+          color: $color-middle-text;
+
+          @include respond(tab-port) {
+            font-size: 2.8rem;
+            line-height: 3.6rem;
+            padding-bottom: 3.7rem;
+          }
+        }
+      }
+      &__employee {
+        display: flex;
+        align-items: center;
+
+        @include respond(tab-port) {
+          padding-bottom: 5rem;
+        }
+
+        margin-right: 2.5rem;
+        &__picture {
+          &-img {
+            width: 6.3rem;
+            height: 6.3rem;
+            border-radius: 50%;
+            @include respond(tab-port) {
+              width: 6.3rem;
+              height: 6.3rem;
+              border-radius: 50%;
+            }
+          }
+        }
+
+        &__text {
+          color: $color-middle-text;
+          &-title {
+            @include respond(tab-port) {
+              font-size: 1.8rem;
+              line-height: 2.3rem;
+            }
+          }
+
+          &-p {
+            @include respond(tab-port) {
+              font-size: 1.6rem;
+              line-height: 1.8rem;
+            }
+          }
+        }
+      }
+    }
+    &__input {
+      display: flex;
+      flex-direction: column;
+      @include respond(tab-port) {
+        flex-direction: column;
+      }
+      &__group {
+        display: flex;
+        @include respond(tab-port) {
+          flex-direction: column;
+        }
+        &-label {
+          color: $color-label;
+          opacity: 30%;
+
+          @include respond(tab-port) {
+            font-size: 1.6rem;
+            line-height: 2rem;
+          }
+        }
+
+        &-name {
+          border: none;
+          border-bottom: 1px solid $color-input;
+          opacity: 50%;
+
+          @include respond(tab-port) {
+            margin-bottom: 2.5rem;
+          }
+        }
+
+        &-btn {
+          background-color: $color-history-choice;
+          border: none;
+          color: $color-text;
+
+          @include respond(tab-port) {
+            font-size: 1.6rem;
+            line-height: 2rem;
+            width: 19.7rem;
+            height: 5rem;
+            border-radius: 0.5rem;
+            margin-top: 0.5rem;
+            align-self: flex-end;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,202 @@
+.hero {
+  background-color: $color-hero-section;
+  padding: 5rem 16rem 0 16rem;
+
+  @include respond(tab-port) {
+    padding: 5rem 2rem 0 2rem;
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 19rem;
+
+    @include respond(tab-port) {
+      justify-content: space-between;
+      padding-bottom: 8rem;
+    }
+
+    &-img {
+      width: 20rem;
+      height: auto;
+
+      @include respond(tab-port) {
+        height: auto;
+        width: 21rem;
+      }
+    }
+  }
+
+  &__btn {
+    color: $color-hero-btn;
+    border-radius: 5.5rem;
+    border: 1px solid $color-hero-btn;
+    background-color: transparent;
+    cursor: pointer;
+
+    height: 3rem;
+    width: 15.6rem;
+    border-radius: 5.5rem;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+
+    @include respond(tab-port) {
+      height: 3.2rem;
+      width: 14.7rem;
+      border-radius: 4.7rem;
+      line-height: 1.2rem;
+      font-size: 1.2rem;
+    }
+  }
+
+  &__section {
+    display: flex;
+    justify-content: space-between;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+      padding-bottom: -3rem;
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+
+      @include respond(tab-port) {
+        padding-bottom: 3rem;
+      }
+
+      &-title {
+        color: $color-text;
+
+        font-size: 5rem;
+        line-height: 6rem;
+        margin-bottom: 3.4rem;
+
+        @include respond(tab-port) {
+          font-size: 4.2rem;
+          line-height: 4.5rem;
+          padding-bottom: 3rem;
+        }
+      }
+      &-paragraph {
+        color: $color-text;
+        font-size: 2.1rem;
+        line-height: 2.6rem;
+        margin-bottom: 3.4rem;
+
+        @include respond(tab-port) {
+          font-size: 2.6rem;
+          line-height: 3.2rem;
+          padding-bottom: 3rem;
+        }
+      }
+      &-btn {
+        color: $color-text;
+        background-color: $color-hero-btn;
+        align-self: start;
+        cursor: pointer;
+
+        border: none;
+
+        width: 16rem;
+        height: 4.6rem;
+        border-radius: 0.4rem;
+
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+
+        @include respond(tab-port) {
+          align-self: start;
+          width: 19.7rem;
+          height: 5rem;
+          border-radius: 0.5rem;
+          line-height: 2.3rem;
+          border: none;
+        }
+      }
+    }
+
+    &-logo {
+      width: 50rem;
+      height: auto;
+
+      @include respond(tab-port) {
+        width: 34.3rem;
+        height: auto;
+        align-self: flex-end;
+      }
+    }
+  }
+
+  &__middle {
+    &__logobar {
+      background-color: $color-middle;
+      transform: translateY(50%);
+      display: flex;
+      align-items: center;
+      padding: 5rem;
+      margin-top: 10rem;
+
+      @include respond(tab-port) {
+        transform: translateY(70%);
+        align-items: center;
+        flex-direction: column;
+        padding: 4rem 0;
+      }
+
+      &-text {
+        color: $color-middle-text;
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+        margin-right: auto;
+
+        @include respond(tab-port) {
+          font-size: 2rem;
+          padding-bottom: 6.25rem;
+        }
+      }
+
+      &__icon {
+        display: flex;
+        width: 70%;
+        justify-content: space-between;
+
+        @include respond(tab-port) {
+          flex-direction: column;
+          justify-content: space-evenly;
+          align-items: center;
+        }
+
+        &-1 {
+          width: 14rem;
+          height: auto;
+          @include respond(tab-port) {
+            width: 15rem;
+            height: auto;
+            padding-bottom: 6.25rem;
+          }
+        }
+        &-2 {
+          width: 14rem;
+          height: auto;
+          @include respond(tab-port) {
+            width: 15rem;
+            height: auto;
+            padding-bottom: 6.25rem;
+          }
+        }
+        &-3 {
+          width: 14.5rem;
+          height: auto;
+          @include respond(tab-port) {
+            width: 15rem;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}

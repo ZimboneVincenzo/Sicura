@@ -1,0 +1,48 @@
+$color-hero-section: #2D3B56;
+$color-hero-btn: #FDAC17;
+$color-text: #FFFFFF;
+$color-middle: #F4F5F7;
+$color-history: #E5E5E5;
+$color-middle-text:#2D3B56;
+$color-history-choice:#FDAC17;
+$color-label: #000000;
+$color-input: #CACACA;
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%;
+
+    @include respond(phone){
+        font-size: 50%;
+    }
+
+    
+    @include respond(tab-port){
+        font-size: 50%; // 1rem = 8px 8/16 = 50%
+    }
+
+      
+    @include respond(tab-min){
+        font-size: 50%; // 1rem = 8px 8/16 = 50%
+    }
+
+    @include respond(big-desktop){
+        
+    }
+}
+
+body{
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    margin: 0 auto;
+}

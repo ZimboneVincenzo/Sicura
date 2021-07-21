@@ -1,0 +1,242 @@
+.history {
+  background-color: $color-text;
+  display: flex;
+
+  @include respond(tab-min) {
+    flex-wrap: wrap;
+    padding: 21rem 2rem 19rem 16rem;
+  }
+
+  @include respond(tab-port) {
+    flex-direction: column;
+    padding: 12.5rem 2.5rem;
+  }
+
+  &__text {
+    color: $color-middle-text;
+
+    @include respond(tab-min) {
+      width: 50%;
+      flex-direction: column;
+      padding-top: 28rem;
+      padding-right: 30rem;
+    }
+
+    @include respond(tab-port) {
+      display: flex;
+      padding-top: 40rem;
+      padding-bottom: 3rem;
+      flex-direction: column;
+    }
+    &-title {
+      font-size: 3.5rem;
+      line-height: 4.9rem;
+      padding-bottom: 4rem;
+
+      @include respond(tab-port) {
+        font-size: 2.8rem;
+        line-height: 3.6rem;
+        padding-bottom: 3rem;
+      }
+    }
+
+    &__paragraph {
+      &-1 {
+        font-size: 1.7rem;
+        line-height: 2.8rem;
+        padding-bottom: 2.8rem;
+        opacity: 80%;
+
+        @include respond(tab-port) {
+          font-size: 2rem;
+          line-height: 3.2rem;
+          padding-bottom: 3rem;
+        }
+      }
+
+      &-2 {
+        font-size: 1.7rem;
+        line-height: 2.8rem;
+        padding-bottom: 2.8rem;
+        opacity: 80%;
+
+        @include respond(tab-port) {
+          font-size: 2rem;
+          line-height: 3.2rem;
+          padding-bottom: 3rem;
+        }
+      }
+    }
+  }
+
+  &__img {
+    @include respond(tab-min) {
+      width: 50%;
+
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: repeat(8, 1fr);
+      grid-column-gap: 2rem;
+      grid-row-gap: 3rem;
+    }
+
+    @include respond(tab-port) {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: repeat(8, 1fr);
+      grid-column-gap: 2rem;
+      grid-row-gap: 3rem;
+    }
+
+    &-1 {
+      grid-column: 1 / 6;
+      grid-row: 3 / 7;
+      width: 100%;
+      height: auto;
+
+      @include respond(tab-port) {
+        grid-column: 1 / 6;
+        grid-row: 3 / 7;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &-2 {
+      grid-column: 6 / -1;
+      grid-row: 1 / 4;
+      width: 100%;
+      height: auto;
+
+      @include respond(tab-port) {
+        grid-column: 6 / -1;
+        grid-row: 1 / 4;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &-3 {
+      @include respond(tab-min) {
+        display: none;
+      }
+      @include respond(tab-port) {
+        grid-column: 6 / -1;
+        grid-row: 4 / -1;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &-4 {
+      @include respond(tab-min) {
+        grid-column: 6 / 12;
+        grid-row: 4 / -1;
+        width: 100%;
+        height: auto;
+      }
+
+      @include respond(tab-port) {
+        display: none;
+      }
+    }
+  }
+
+  &__service {
+    display: flex;
+    justify-content: space-between;
+    @include respond(tab-min) {
+      width: 100%;
+      margin-top: 20rem;
+    }
+
+    @include respond(tab-port) {
+      flex-direction: column;
+    }
+    &-title {
+      @include respond(tab-min) {
+        width: 50%;
+
+      }
+      color: $color-middle-text;
+      font-size: 3.5rem;
+      line-height: 4.3rem;
+
+      @include respond(tab-port) {
+        font-size: 2.8rem;
+        line-height: 3.6rem;
+        padding-bottom: 4rem;
+      }
+    }
+
+    &__type {
+      display: flex;
+
+      flex-direction: column;
+      @include respond(tab-min) {
+        width: 50%;
+        padding-right: 20rem;
+
+      }
+
+
+      @include respond(tab-port) {
+        flex-direction: column;
+      }
+      &__insurance {
+        display: flex;
+        margin-bottom: 5rem;
+
+        @include respond(tab-port) {
+          flex-direction: column;
+          margin-bottom: 6rem;
+        }
+
+        &__logo {
+          width: 6.2rem;
+          height: 6.2rem;
+          border-radius: 1.6rem;
+          background-color: rgba(0, 0, 0, 0.1);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 2rem;
+
+          @include respond(tab-min) {
+            margin-right: 6.2rem;
+          }
+
+          &-icon {
+            width: 3.8rem;
+            height: 3rem;
+          }
+        }
+
+        &__text {
+          color: $color-middle-text;
+          &-title {
+
+            font-size: 2.4rem;
+            line-height: 3rem;
+            margin-bottom: 1.5rem;
+
+            @include respond(tab-port) {
+              font-size: 2.2rem;
+              line-height: 2.8rem;
+              padding-bottom: rem;
+            }
+          }
+
+          &-paragraph {
+            font-size: 1.6rem;
+            line-height: 2.8rem;
+            @include respond(tab-port) {
+              font-size: 2rem;
+              line-height: 3.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

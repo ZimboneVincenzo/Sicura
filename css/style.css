@@ -1,3 +1,21 @@
+@font-face {
+  font-family: "Mulish", sans-serif;
+  src: url("../assets/font/Mulish-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Mulish", sans-serif;
+  src: url("../assets/font/Mulish-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Mulish", sans-serif;
+  src: url("../assets/font/Mulish-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
 *,
 *::after,
 *::before {
@@ -9,11 +27,6 @@
 html {
   font-size: 62.5%;
 }
-@media only screen and (max-width: 37.5em) {
-  html {
-    font-size: 50%;
-  }
-}
 @media only screen and (max-width: 56.25em) {
   html {
     font-size: 50%;
@@ -24,8 +37,11 @@ html {
     font-size: 50%;
   }
 }
+
 body {
   box-sizing: border-box;
+  width: 100%;
+  font-family: "Mulish", sans-serif;
 }
 
 .container {
@@ -55,6 +71,7 @@ body {
   font-size: 3.5rem;
   line-height: 4.3rem;
   padding-bottom: 6rem;
+  font-weight: 600;
 }
 @media only screen and (max-width: 56.25em) {
   .choice-title {
@@ -84,6 +101,7 @@ body {
   font-size: 2.2rem;
   line-height: 2.8rem;
   padding-bottom: 1.5rem;
+  font-weight: 600;
 }
 @media only screen and (max-width: 56.25em) {
   .choice__paragraph__container__text-title {
@@ -94,11 +112,12 @@ body {
 .choice__paragraph__container__text-p {
   font-size: 2rem;
   line-height: 3.2rem;
-  opacity: 80%;
+  font-weight: 600;
 }
 @media only screen and (max-width: 56.25em) {
   .choice__paragraph__container__text-p {
     padding-left: 2rem;
+    opacity: 80%;
   }
 }
 
@@ -106,6 +125,7 @@ body {
   background-color: #F4F5F7;
   display: flex;
   flex-direction: column;
+  padding: 6rem 16rem;
 }
 @media only screen and (max-width: 56.25em) {
   .contact {
@@ -115,6 +135,10 @@ body {
 }
 .contact__text-title {
   color: #2D3B56;
+  font-size: 3rem;
+  line-height: 3.7rem;
+  margin-bottom: 9rem;
+  font-weight: 600;
 }
 @media only screen and (max-width: 56.25em) {
   .contact__text-title {
@@ -125,11 +149,17 @@ body {
 }
 .contact__request {
   display: flex;
+  width: 80%;
 }
 @media only screen and (max-width: 56.25em) {
   .contact__request {
     flex-direction: column;
     width: 100%;
+  }
+}
+@media only screen and (min-width: 56.25em) {
+  .contact__request__consulting {
+    margin-right: auto;
   }
 }
 @media only screen and (max-width: 56.25em) {
@@ -139,6 +169,9 @@ body {
 }
 .contact__request__consulting-title {
   color: #2D3B56;
+  font-size: 2.3rem;
+  line-height: 2.8rem;
+  font-weight: 600;
 }
 @media only screen and (max-width: 56.25em) {
   .contact__request__consulting-title {
@@ -148,6 +181,10 @@ body {
 }
 .contact__request__consulting-paragraph {
   color: #2D3B56;
+  font-size: 1.6rem;
+  line-height: 3.2rem;
+  opacity: 80%;
+  font-weight: 400;
 }
 @media only screen and (max-width: 56.25em) {
   .contact__request__consulting-paragraph {
@@ -159,6 +196,8 @@ body {
 .contact__request__consulting__number {
   display: flex;
   justify-content: space-between;
+  font-size: 1.8rem;
+  line-height: 3.2rem;
 }
 @media only screen and (max-width: 56.25em) {
   .contact__request__consulting__number {
@@ -167,6 +206,10 @@ body {
 }
 .contact__request__consulting__number-n {
   color: #FDAC17;
+  font-weight: 700;
+}
+.contact__request__consulting__number-n:not(last-child) {
+  margin-right: 4rem;
 }
 @media only screen and (max-width: 56.25em) {
   .contact__request__consulting__number-n {
@@ -176,6 +219,9 @@ body {
 }
 .contact__request__question__mail-title {
   color: #2D3B56;
+  font-size: 2.3rem;
+  line-height: 2.8rem;
+  font-weight: 600;
 }
 @media only screen and (max-width: 56.25em) {
   .contact__request__question__mail-title {
@@ -185,6 +231,10 @@ body {
 }
 .contact__request__question__mail-paragraph {
   color: #2D3B56;
+  font-size: 1.6rem;
+  line-height: 3.2rem;
+  opacity: 80%;
+  font-weight: 400;
 }
 @media only screen and (max-width: 56.25em) {
   .contact__request__question__mail-paragraph {
@@ -195,6 +245,9 @@ body {
 }
 .contact__request__question__mail-send {
   color: #FDAC17;
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+  font-weight: 700;
 }
 @media only screen and (max-width: 56.25em) {
   .contact__request__question__mail-send {
@@ -206,6 +259,8 @@ body {
 .footer {
   background-color: #2D3B56;
   display: flex;
+  flex-direction: column;
+  padding: 6rem 20rem;
 }
 @media only screen and (max-width: 56.25em) {
   .footer {
@@ -213,118 +268,206 @@ body {
     padding: 6.2rem 2.5rem;
   }
 }
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10.6rem;
+}
 @media only screen and (max-width: 56.25em) {
-  .footer__logo-img {
+  .footer__container {
+    flex-direction: column;
+    margin-bottom: 7.5rem;
+  }
+}
+.footer__container__logo-img {
+  width: 20rem;
+  height: auto;
+}
+@media only screen and (max-width: 56.25em) {
+  .footer__container__logo-img {
     width: 17.5rem;
     height: auto;
     margin-bottom: 6.2rem;
   }
 }
-.footer__agency {
+.footer__container__agency {
   color: #FFFFFF;
+  opacity: 90%;
 }
 @media only screen and (max-width: 56.25em) {
-  .footer__agency {
+  .footer__container__agency {
     margin-bottom: 5rem;
   }
 }
+.footer__container__agency-title {
+  font-size: 1.7rem;
+  line-height: 2.1rem;
+  margin-bottom: 1.8rem;
+  font-weight: 700;
+}
 @media only screen and (max-width: 56.25em) {
-  .footer__agency-title {
+  .footer__container__agency-title {
     font-size: 1.7rem;
     line-height: 2.1rem;
     margin-bottom: 1.8rem;
   }
 }
+.footer__container__agency__address-road {
+  font-size: 1.75rem;
+  line-height: 3.5rem;
+  font-weight: 400;
+}
 @media only screen and (max-width: 56.25em) {
-  .footer__agency__address-road {
+  .footer__container__agency__address-road {
     font-size: 1.75rem;
     line-height: 2.5rem;
   }
 }
+.footer__container__agency__address-street {
+  font-size: 1.75rem;
+  line-height: 3.5rem;
+  margin-bottom: 1.8rem;
+  font-weight: 400;
+}
 @media only screen and (max-width: 56.25em) {
-  .footer__agency__address-street {
+  .footer__container__agency__address-street {
     font-size: 1.75rem;
     line-height: 2.5rem;
     margin-bottom: 1.8rem;
   }
 }
+.footer__container__agency__day-open {
+  font-size: 1.8rem;
+  line-height: 3.5rem;
+  font-weight: 400;
+}
 @media only screen and (max-width: 56.25em) {
-  .footer__agency__day-open {
+  .footer__container__agency__day-open {
     font-size: 1.75rem;
     line-height: 2.5rem;
   }
 }
+.footer__container__agency__day-hour {
+  font-size: 1.75rem;
+  line-height: 3.5rem;
+  font-weight: 400;
+}
 @media only screen and (max-width: 56.25em) {
-  .footer__agency__day-hour {
+  .footer__container__agency__day-hour {
     font-size: 1.75rem;
     line-height: 2.5rem;
   }
 }
-.footer__contact {
+.footer__container__contact {
   color: #FFFFFF;
+  opacity: 90%;
 }
 @media only screen and (max-width: 56.25em) {
-  .footer__contact {
+  .footer__container__contact {
     margin-bottom: 5rem;
   }
 }
+.footer__container__contact-title {
+  font-size: 1.75rem;
+  line-height: 2.1rem;
+  margin-bottom: 1.8rem;
+  font-weight: 700;
+}
 @media only screen and (max-width: 56.25em) {
-  .footer__contact-title {
+  .footer__container__contact-title {
     font-size: 1.75rem;
     line-height: 2.1rem;
     margin-bottom: 1.8rem;
   }
 }
+.footer__container__contact-number {
+  font-size: 1.75rem;
+  line-height: 2.5rem;
+  font-weight: 400;
+}
 @media only screen and (max-width: 56.25em) {
-  .footer__contact-number {
+  .footer__container__contact-number {
+    font-size: 1.75rem;
+    line-height: 2.5rem;
+  }
+}
+.footer__container__contact-mail {
+  font-size: 1.75rem;
+  line-height: 2.5rem;
+  font-weight: 400;
+}
+@media only screen and (max-width: 56.25em) {
+  .footer__container__contact-mail {
     font-size: 1.75rem;
     line-height: 2.5rem;
   }
 }
 @media only screen and (max-width: 56.25em) {
-  .footer__contact-mail {
-    font-size: 1.75rem;
-    line-height: 2.5rem;
-  }
-}
-.footer__follow {
-  color: #FFFFFF;
-}
-@media only screen and (max-width: 56.25em) {
-  .footer__follow {
+  .footer__container__follow {
     margin-bottom: 7.5rem;
   }
 }
+.footer__container__follow-title {
+  color: #FFFFFF;
+  font-size: 1.75rem;
+  line-height: 2.1rem;
+  margin-bottom: 1.8rem;
+  font-weight: 700;
+  opacity: 90%;
+}
 @media only screen and (max-width: 56.25em) {
-  .footer__follow-title {
+  .footer__container__follow-title {
     font-size: 1.75rem;
     line-height: 2.1rem;
     margin-bottom: 1.8rem;
   }
 }
+.footer__container__follow__logo-face {
+  font-size: 2.2rem;
+  line-height: 2.2rem;
+  margin-right: 2.5rem;
+}
 @media only screen and (max-width: 56.25em) {
-  .footer__follow__logo-face {
+  .footer__container__follow__logo-face {
     font-size: 2.2rem;
     line-height: 2.2rem;
     margin-right: 2.5rem;
   }
 }
+.footer__container__follow__logo-insta {
+  font-size: 2.2rem;
+  line-height: 2.2rem;
+}
 @media only screen and (max-width: 56.25em) {
-  .footer__follow__logo-insta {
+  .footer__container__follow__logo-insta {
     font-size: 2.2rem;
     line-height: 2.2rem;
   }
 }
 .footer__policy {
   color: #FFFFFF;
+  display: flex;
+}
+@media only screen and (max-width: 56.25em) {
+  .footer__policy {
+    flex-direction: column;
+  }
 }
 .footer__policy__year {
   display: flex;
+  margin-right: auto;
+  opacity: 90%;
 }
 @media only screen and (max-width: 56.25em) {
   .footer__policy__year {
     margin-bottom: 1.8rem;
   }
+}
+.footer__policy__year-sicura {
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  margin-right: 5rem;
+  font-weight: 400;
 }
 @media only screen and (max-width: 56.25em) {
   .footer__policy__year-sicura {
@@ -333,14 +476,36 @@ body {
     margin-right: 5rem;
   }
 }
+.footer__policy__year-privacy {
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  font-weight: 400;
+}
 @media only screen and (max-width: 56.25em) {
   .footer__policy__year-privacy {
     font-size: 1.6rem;
     line-height: 1.8rem;
   }
 }
+.footer__policy__mono-designed {
+  opacity: 90%;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  font-weight: 400;
+}
 @media only screen and (max-width: 56.25em) {
   .footer__policy__mono-designed {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+  }
+}
+.footer__policy__mono-span {
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  color: #FFFFFF;
+}
+@media only screen and (max-width: 56.25em) {
+  .footer__policy__mono-span {
     font-size: 1.6rem;
     line-height: 1.8rem;
   }
@@ -349,8 +514,9 @@ body {
 .form {
   margin-top: 6.3rem;
   display: flex;
-  padding: 6rem 16rem;
+  padding: 6rem 20rem;
   justify-content: space-between;
+  flex-direction: column;
 }
 @media only screen and (max-width: 56.25em) {
   .form {
@@ -358,97 +524,172 @@ body {
     padding: 12.5rem 2.5rem;
   }
 }
-.form__section__container__title-call {
+.form__title-call {
   color: #2D3B56;
+  padding-bottom: 7.3rem;
+  font-size: 3rem;
+  line-height: 3.7rem;
+  font-weight: 600;
 }
 @media only screen and (max-width: 56.25em) {
-  .form__section__container__title-call {
+  .form__title-call {
     font-size: 2.8rem;
     line-height: 3.6rem;
     padding-bottom: 3.7rem;
   }
 }
-.form__section__container__employee {
+.form__container {
   display: flex;
-  align-items: center;
-  margin-right: 2.5rem;
+  justify-content: space-between;
 }
 @media only screen and (max-width: 56.25em) {
-  .form__section__container__employee {
+  .form__container {
+    flex-direction: column;
+  }
+}
+.form__container__employee {
+  display: flex;
+  align-items: self-start;
+}
+@media only screen and (max-width: 56.25em) {
+  .form__container__employee {
     padding-bottom: 5rem;
   }
 }
-.form__section__container__employee__picture-img {
-  width: 6.3rem;
-  height: 6.3rem;
+.form__container__employee__picture-img {
+  width: 7rem;
+  height: 7rem;
   border-radius: 50%;
+  margin-right: 2rem;
 }
 @media only screen and (max-width: 56.25em) {
-  .form__section__container__employee__picture-img {
+  .form__container__employee__picture-img {
     width: 6.3rem;
     height: 6.3rem;
     border-radius: 50%;
   }
 }
-.form__section__container__employee__text {
+.form__container__employee__text {
   color: #2D3B56;
 }
-@media only screen and (max-width: 56.25em) {
-  .form__section__container__employee__text-title {
-    font-size: 1.8rem;
-    line-height: 2.3rem;
-  }
+.form__container__employee__text-title {
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  font-weight: 600;
 }
 @media only screen and (max-width: 56.25em) {
-  .form__section__container__employee__text-p {
+  .form__container__employee__text-title {
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+  }
+}
+.form__container__employee__text-p {
+  opacity: 80%;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  font-weight: 400;
+}
+@media only screen and (max-width: 56.25em) {
+  .form__container__employee__text-p {
     font-size: 1.6rem;
     line-height: 1.8rem;
   }
 }
-.form__section__input {
+.form__container__input {
   display: flex;
   flex-direction: column;
+  width: 50%;
 }
 @media only screen and (max-width: 56.25em) {
-  .form__section__input {
+  .form__container__input {
     flex-direction: column;
+    width: 100%;
   }
 }
-.form__section__input__group {
+.form__container__input__group {
   display: flex;
+  justify-content: space-between;
 }
 @media only screen and (max-width: 56.25em) {
-  .form__section__input__group {
+  .form__container__input__group {
     flex-direction: column;
   }
 }
-.form__section__input__group-label {
+.form__container__input__group__generality {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5.5rem;
+}
+.form__container__input__group__generality-label {
   color: #000000;
-  opacity: 30%;
+  opacity: 50%;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 400;
 }
 @media only screen and (max-width: 56.25em) {
-  .form__section__input__group-label {
+  .form__container__input__group__generality-label {
+    opacity: 30%;
     font-size: 1.6rem;
     line-height: 2rem;
   }
 }
-.form__section__input__group-name {
+.form__container__input__group__generality-name {
   border: none;
   border-bottom: 1px solid #CACACA;
   opacity: 50%;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
 }
 @media only screen and (max-width: 56.25em) {
-  .form__section__input__group-name {
+  .form__container__input__group__generality-name {
     margin-bottom: 2.5rem;
   }
 }
-.form__section__input__group-btn {
+.form__container__input__group__request {
+  margin-bottom: 4rem;
+  width: 100%;
+}
+.form__container__input__group__request-label {
+  color: #000000;
+  opacity: 50%;
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .form__container__input__group__request-label {
+    opacity: 30%;
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+}
+.form__container__input__group__request-name {
+  border: none;
+  border-bottom: 1px solid #CACACA;
+  opacity: 50%;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  width: 100%;
+}
+@media only screen and (max-width: 56.25em) {
+  .form__container__input__group__request-name {
+    margin-bottom: 2.5rem;
+  }
+}
+.form__container__input__group-btn {
   background-color: #FDAC17;
   border: none;
   color: #FFFFFF;
+  align-self: flex-end;
+  width: 24rem;
+  height: 4.8rem;
+  border-radius: 0.4rem;
+  font-size: 1.7rem;
+  line-height: 2.1rem;
+  font-weight: 700;
 }
 @media only screen and (max-width: 56.25em) {
-  .form__section__input__group-btn {
+  .form__container__input__group-btn {
     font-size: 1.6rem;
     line-height: 2rem;
     width: 19.7rem;
@@ -501,6 +742,7 @@ body {
   border-radius: 5.5rem;
   font-size: 1.4rem;
   line-height: 1.7rem;
+  font-weight: 700;
 }
 @media only screen and (max-width: 56.25em) {
   .hero__btn {
@@ -535,6 +777,7 @@ body {
   font-size: 5rem;
   line-height: 6rem;
   margin-bottom: 3.4rem;
+  font-weight: 600;
 }
 @media only screen and (max-width: 56.25em) {
   .hero__section__text-title {
@@ -548,6 +791,7 @@ body {
   font-size: 2.1rem;
   line-height: 2.6rem;
   margin-bottom: 3.4rem;
+  font-weight: 400;
 }
 @media only screen and (max-width: 56.25em) {
   .hero__section__text-paragraph {
@@ -567,6 +811,7 @@ body {
   border-radius: 0.4rem;
   font-size: 1.5rem;
   line-height: 1.8rem;
+  font-weight: 700;
 }
 @media only screen and (max-width: 56.25em) {
   .hero__section__text-btn {
@@ -609,7 +854,12 @@ body {
   color: #2D3B56;
   font-size: 1.8rem;
   line-height: 2.2rem;
-  margin-right: auto;
+  font-weight: 600;
+}
+@media only screen and (min-width: 56.25em) {
+  .hero__middle__logobar-text {
+    margin-right: auto;
+  }
 }
 @media only screen and (max-width: 56.25em) {
   .hero__middle__logobar-text {
@@ -681,14 +931,6 @@ body {
 .history__text {
   color: #2D3B56;
 }
-@media only screen and (min-width: 56.25em) {
-  .history__text {
-    width: 50%;
-    flex-direction: column;
-    padding-top: 28rem;
-    padding-right: 30rem;
-  }
-}
 @media only screen and (max-width: 56.25em) {
   .history__text {
     display: flex;
@@ -697,10 +939,26 @@ body {
     flex-direction: column;
   }
 }
+@media only screen and (min-width: 56.25em) {
+  .history__text {
+    width: 50%;
+    flex-direction: column;
+    padding-top: 28rem;
+    padding-right: 26rem;
+  }
+}
+@media only screen and (max-width: 75em) {
+  .history__text {
+    flex-direction: column;
+    padding-top: 26rem;
+    padding-right: 12rem;
+  }
+}
 .history__text-title {
   font-size: 3.5rem;
   line-height: 4.9rem;
   padding-bottom: 4rem;
+  font-weight: 600;
 }
 @media only screen and (max-width: 56.25em) {
   .history__text-title {
@@ -712,6 +970,7 @@ body {
 .history__text__paragraph-1 {
   font-size: 1.7rem;
   line-height: 2.8rem;
+  font-weight: 400;
   padding-bottom: 2.8rem;
   opacity: 80%;
 }
@@ -827,6 +1086,7 @@ body {
   color: #2D3B56;
   font-size: 3.5rem;
   line-height: 4.3rem;
+  font-weight: 600;
 }
 @media only screen and (min-width: 56.25em) {
   .history__service-title {
@@ -891,6 +1151,7 @@ body {
   font-size: 2.4rem;
   line-height: 3rem;
   margin-bottom: 1.5rem;
+  font-weight: 600;
 }
 @media only screen and (max-width: 56.25em) {
   .history__service__type__insurance__text-title {
@@ -902,6 +1163,8 @@ body {
 .history__service__type__insurance__text-paragraph {
   font-size: 1.6rem;
   line-height: 2.8rem;
+  font-weight: 400;
+  opacity: 80%;
 }
 @media only screen and (max-width: 56.25em) {
   .history__service__type__insurance__text-paragraph {

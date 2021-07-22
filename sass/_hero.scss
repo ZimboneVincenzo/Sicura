@@ -41,6 +41,7 @@
     border-radius: 5.5rem;
     font-size: 1.4rem;
     line-height: 1.7rem;
+    font-weight: 700;
 
     @include respond(tab-port) {
       height: 3.2rem;
@@ -74,19 +75,22 @@
         font-size: 5rem;
         line-height: 6rem;
         margin-bottom: 3.4rem;
+        font-weight: 600;
 
         @include respond(tab-port) {
           font-size: 4.2rem;
           line-height: 4.5rem;
           padding-bottom: 3rem;
+          
         }
       }
+      
       &-paragraph {
         color: $color-text;
         font-size: 2.1rem;
         line-height: 2.6rem;
         margin-bottom: 3.4rem;
-
+        font-weight: 400;
         @include respond(tab-port) {
           font-size: 2.6rem;
           line-height: 3.2rem;
@@ -107,6 +111,7 @@
 
         font-size: 1.5rem;
         line-height: 1.8rem;
+        font-weight: 700;
 
         @include respond(tab-port) {
           align-self: start;
@@ -151,7 +156,11 @@
         color: $color-middle-text;
         font-size: 1.8rem;
         line-height: 2.2rem;
-        margin-right: auto;
+        font-weight: 600;
+
+        @include respond(tab-min) {
+          margin-right: auto;
+        }
 
         @include respond(tab-port) {
           font-size: 2rem;

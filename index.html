@@ -8,7 +8,7 @@
     <title>Sicura</title>
   </head>
   <body>
-    <section class="hero">
+    <div class="hero">
       <div class="hero__logo">
         <img
           src="assets/Group 170.png"
@@ -20,7 +20,7 @@
       <div class="hero__section">
         <div class="hero__section__text">
           <h3 class="hero__section__text-title">
-            Soluzioni assicurative?<br />
+            Soluzioni assicurative?<br/>
             Scegli Sicura.
           </h3>
           <p class="hero__section__text-paragraph">
@@ -54,12 +54,12 @@
           />
         </div>
       </div>
-    </section>
+    </div>
 
-    <section class="history">
+    <div class="history">
       <div class="history__text">
         <div class="history__text-title">
-          La tua vita, la nostra garanzia  di protezione
+          La tua vita, la nostra garanzia di protezione
         </div>
         <div class="history__text__paragraph-1">
           Sicura è una società di intermediazione assicurativa con sede a
@@ -175,10 +175,9 @@
           </div>
         </div>
       </div>
+    </div>
 
-    </section>
-
-    <section class="choice">
+    <div class="choice">
       <h2 class="choice-title">Perchè scegliere Sicura</h2>
       <div class="choice__paragraph__container">
         <div class="choice__paragraph__container__text">
@@ -202,57 +201,55 @@
           </p>
         </div>
       </div>
-    </section>
+    </div>
 
     <div class="form">
-      <div class="form__section__container">
-        <div class="form__section__container__title">
-          <h2 class="form__section__container__title-call">
-            Ricevi una chiamata da un esperto
-          </h2>
-        </div>
-        <div class="form__section__container__employee">
-          <div class="form__section__container__employee__picture">
+      <div class="form__title">
+        <h2 class="form__title-call">Ricevi una chiamata da un esperto</h2>
+      </div>
+      <div class="form__container">
+        <div class="form__container__employee">
+          <div class="form__container__employee__picture">
             <img
               src="assets/formImage.jfif"
               alt=""
-              class="form__section__container__employee__picture-img"
+              class="form__container__employee__picture-img"
             />
           </div>
-          <div class="form__section__container__employee__text">
-            <h2 class="form__section__container__employee__text-title">
+          <div class="form__container__employee__text">
+            <h2 class="form__container__employee__text-title">
               Gianluca Cangemi
             </h2>
-            <p class="form__section__container__employee__text-p">
+            <p class="form__container__employee__text-p">
               Intermediario assicurativo
             </p>
           </div>
         </div>
-      </div>
-     
-      
-      <div class="form__section__input">
-        <div class="form__section__input__group">
-          <label for="" class="form__section__input__group-label">Nome</label>
-          <input type="text" class="form__section__input__group-name" />
-          <!--</div>-->
-          <!--<div class="form__section__input__group">-->
-          <label for="" class="form__section__input__group-label"
-            >Telefono</label
-          >
-          <input type="text" class="form__section__input__group-name" />
+
+        <div class="form__container__input">
+          <div class="form__container__input__group">
+            <div class="form__container__input__group__generality">
+              <label for="" class="form__container__input__group__generality-label">Nome</label>
+            <input type="text" class="form__container__input__group__generality-name" />
+            </div>
+            
+            <!--</div>-->
+            <!--<div class="form__section__input__group">-->
+              <div class="form__container__input__group__generality">
+            <label for="" class="form__container__input__group__generality-label">Telefono</label>
+            <input type="text" class="form__container__input__group__generality-name" />
+          </div>
+          </div>
+          <div class="form__container__input__group__request">
+            <label for="" class="form__container__input__group__request-label">&nbsp;</label>
+            <input
+              type="text"
+              class="form__container__input__group__request-name"
+              placeholder="Inserisci la tua richiesta"
+            />
+          </div>
+          <button class="form__container__input__group-btn">Richiedi chiamata</button>
         </div>
-        <div class="form__section__input__group">
-          <label for="" class="form__section__input__group-label">&nbsp;</label>
-          <input
-            type="text"
-            class="form__section__input__group-name"
-            placeholder="Inserisci la tua richiesta"
-          />
-        </div>
-        <button class="form__section__input__group-btn">
-          Richiedi chiamata
-        </button>
       </div>
     </div>
 
@@ -292,44 +289,59 @@
     </div>
 
     <footer class="footer">
-      <div class="footer__logo">
-        <img src="assets/Group 12.png" alt="Image logo" class="footer__logo-img">
-      </div>
-      <div class="footer__agency">
-        <h2 class="footer__agency-title">AGENZIA</h2>
-        <div class="footer__agency__address">
-          <p class="footer__agency__address-road">Via Etnea 736</p>
-          <p class="footer__agency__address-street">95121 Catania CT</p>
+      <div class="footer__container">
+        <div class="footer__container__logo">
+          <img
+            src="assets/Group 12.png"
+            alt="Image logo"
+            class="footer__container__logo-img"
+          />
         </div>
-        <div class="footer__agency__day">
-          <p class="footer__agency__day-open">Lunedì · Venerdì</p>
-          <p class="footer__agency__day-hour">8:30 - 13:00 · 15:00 - 18:00</p>
+        <div class="footer__container__agency">
+          <h2 class="footer__container__agency-title">AGENZIA</h2>
+          <div class="footer__container__agency__address">
+            <p class="footer__container__agency__address-road">Via Etnea 736</p>
+            <p class="footer__container__agency__address-street">95121 Catania CT</p>
+          </div>
+          <div class="footer__container__agency__day">
+            <p class="footer__container__agency__day-open">Lunedì · Venerdì</p>
+            <p class="footer__container__agency__day-hour">8:30 - 13:00 · 15:00 - 18:00</p>
+          </div>
+        </div>
+  
+        <div class="footer__container__contact">
+          <h2 class="footer__container__contact-title">CONTATTI</h2>
+          <p class="footer__container__contact-number">+39 095 7395659</p>
+          <p class="footer__container__contact-mail">info@sicura.com</p>
+        </div>
+  
+        <div class="footer__container__follow">
+          <h2 class="footer__container__follow-title">FOLLOW US</h2>
+          <div class="footer__container__follow__logo">
+            <img
+              src="assets/face.svg"
+              alt="Facebook logo"
+              class="footer__container__follow__logo-face"
+            />
+            <img
+              src="assets/insta.svg"
+              alt=""
+              class="footer__container__follow__logo-insta"
+            />
+          </div>
         </div>
       </div>
-
-      <div class="footer__contact">
-        <h2 class="footer__contact-title">CONTATTI</h2>
-        <p class="footer__contact-number">+39 095 7395659</p>
-        <p class="footer__contact-mail">info@sicura.com</p>
-      </div>
-
-      <div class="footer__follow">
-        <h2 class="footer__follow-title">FOLLOW US</h2>
-        <div class="footer__follow__logo">
-          <img src="assets/face.svg" alt="Facebook logo" class="footer__follow__logo-face">
-          <img src="assets/insta.svg" alt="" class="footer__follow__logo-insta">
+      
+      <div class="footer__policy">
+        <div class="footer__policy__year">
+          <p class="footer__policy__year-sicura">© 2020 Sicura S.r.l</p>
+          <p class="footer__policy__year-privacy">Privacy policy</p>
+        </div>
+        <div class="footer__policy__mono">
+          <p class="footer__policy__mono-designed">Designed by <span class="footer__policy__mono-span">mono.</span>
+            </p>
         </div>
       </div>
-<div class="footer__policy">
- <div class="footer__policy__year">
-   <p class="footer__policy__year-sicura">© 2020 Sicura S.r.l</p>
-   <p class="footer__policy__year-privacy">Privacy policy</p>
- </div>
- <div class="footer__policy__mono">
-   <p class="footer__policy__mono-designed">Designed by mono.</p>
- </div>
-</div>
-
     </footer>
   </body>
 </html>

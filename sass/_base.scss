@@ -17,11 +17,8 @@ $color-input: #CACACA;
 }
 
 html{
+    
     font-size: 62.5%;
-
-    @include respond(phone){
-        font-size: 50%;
-    }
 
     
     @include respond(tab-port){
@@ -30,16 +27,16 @@ html{
 
       
     @include respond(tab-min){
-        font-size: 50%; // 1rem = 8px 8/16 = 50%
+        font-size: 50%;; // 1rem = 8px 8/16 = 50%
     }
 
-    @include respond(big-desktop){
-        
-    }
 }
 
 body{
     box-sizing: border-box;
+    width: 100%;
+
+    font-family: 'Mulish', sans-serif;
 }
 
 .container{

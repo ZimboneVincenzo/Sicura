@@ -1,123 +1,181 @@
 .footer {
   background-color: $color-hero-section;
   display: flex;
+  flex-direction: column;
+  padding: 6rem 20rem;
   @include respond(tab-port) {
     flex-direction: column;
     padding: 6.2rem 2.5rem;
   }
-  &__logo {
-    &-img {
-      @include respond(tab-port) {
-        width: 17.5rem;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10.6rem;
+    @include respond(tab-port) {
+      flex-direction: column;
+      margin-bottom: 7.5rem;
+    }
+    &__logo {
+      &-img {
+        width: 20rem;
         height: auto;
-        margin-bottom: 6.2rem;
+        @include respond(tab-port) {
+          width: 17.5rem;
+          height: auto;
+          margin-bottom: 6.2rem;
+        }
       }
     }
-  }
 
-  &__agency {
-    color: $color-text;
-
-    @include respond(tab-port) {
+    &__agency {
+      color: $color-text;
+      opacity: 90%;
+      @include respond(tab-port) {
         margin-bottom: 5rem;
       }
-    &-title {
-      @include respond(tab-port) {
+
+
+      &-title {
+     
         font-size: 1.7rem;
         line-height: 2.1rem;
         margin-bottom: 1.8rem;
-      }
-    }
+        font-weight: 700;
 
-    &__address {
-      &-road {
         @include respond(tab-port) {
-          font-size: 1.75rem;
-          line-height: 2.5rem;
-          
-        }
-      }
-      &-street {
-        @include respond(tab-port) {
-          font-size: 1.75rem;
-          line-height: 2.5rem;
+          font-size: 1.7rem;
+          line-height: 2.1rem;
           margin-bottom: 1.8rem;
         }
       }
-    }
 
-    &__day {
-      &-open {
-        @include respond(tab-port) {
+      &__address {
+        &-road {
           font-size: 1.75rem;
-          line-height: 2.5rem;
+          line-height: 3.5rem;
+          font-weight: 400;
+          @include respond(tab-port) {
+            font-size: 1.75rem;
+            line-height: 2.5rem;
+          }
+        }
+        &-street {
+          font-size: 1.75rem;
+          line-height: 3.5rem;
+          margin-bottom: 1.8rem;
+          font-weight: 400;
+          @include respond(tab-port) {
+            font-size: 1.75rem;
+            line-height: 2.5rem;
+            margin-bottom: 1.8rem;
+          }
         }
       }
-      &-hour {
-        @include respond(tab-port) {
+
+      &__day {
+        &-open {
+          font-size: 1.8rem;
+          line-height: 3.5rem;
+          font-weight: 400;
+          @include respond(tab-port) {
+            font-size: 1.75rem;
+            line-height: 2.5rem;
+          }
+        }
+        &-hour {
           font-size: 1.75rem;
-          line-height: 2.5rem;
+            line-height: 3.5rem;
+            font-weight: 400;
+          @include respond(tab-port) {
+            font-size: 1.75rem;
+            line-height: 2.5rem;
+          }
         }
       }
     }
-  }
 
-  &__contact {
-    color: $color-text;
+    &__contact {
+      color: $color-text;
+      opacity: 90%;
 
-    @include respond(tab-port) {
+      @include respond(tab-port) {
         margin-bottom: 5rem;
       }
-    &-title {
-      @include respond(tab-port) {
+
+      &-title {
         font-size: 1.75rem;
         line-height: 2.1rem;
         margin-bottom: 1.8rem;
+        font-weight: 700;
+        @include respond(tab-port) {
+          font-size: 1.75rem;
+          line-height: 2.1rem;
+          margin-bottom: 1.8rem;
+        }
       }
-    }
 
-    &-number {
-      @include respond(tab-port) {
+      &-number {
         font-size: 1.75rem;
         line-height: 2.5rem;
+        font-weight: 400;
+        @include respond(tab-port) {
+          font-size: 1.75rem;
+          line-height: 2.5rem;
+        }
       }
-    }
 
-    &-mail {
-      @include respond(tab-port) {
+      &-mail {
         font-size: 1.75rem;
-        line-height: 2.5rem;
+          line-height: 2.5rem;
+          font-weight: 400;
+        @include respond(tab-port) {
+          font-size: 1.75rem;
+          line-height: 2.5rem;
+        }
       }
     }
-  }
 
-  &__follow {
-    color: $color-text;
-    @include respond(tab-port) {
+    &__follow {
+     
+
+      @include respond(tab-port) {
         margin-bottom: 7.5rem;
       }
-    &-title {
-      @include respond(tab-port) {
-        font-size: 1.75rem;
-        line-height: 2.1rem;
-        margin-bottom: 1.8rem;
-      }
-    }
 
-    &__logo {
-        
-      &-face {
+      &-title {
+        color: $color-text;
+        font-size: 1.75rem;
+          line-height: 2.1rem;
+          margin-bottom: 1.8rem;
+          font-weight: 700;
+          opacity: 90%;
         @include respond(tab-port) {
+          font-size: 1.75rem;
+          line-height: 2.1rem;
+          margin-bottom: 1.8rem;
+        }
+      }
+
+      &__logo {
+        &-face {
           font-size: 2.2rem;
           line-height: 2.2rem;
           margin-right: 2.5rem;
+          @include respond(tab-port) {
+            font-size: 2.2rem;
+            line-height: 2.2rem;
+            margin-right: 2.5rem;
+          }
         }
-      }
 
-      &-insta {
-        @include respond(tab-port) {
+        &-insta {
           font-size: 2.2rem;
           line-height: 2.2rem;
+          @include respond(tab-port) {
+            font-size: 2.2rem;
+            line-height: 2.2rem;
+          }
         }
       }
     }
@@ -125,15 +183,26 @@
 
   &__policy {
     color: $color-text;
-
+    display: flex;
    
+    @include respond(tab-port) {
+      flex-direction: column;
+    }
+
     &__year {
       display: flex;
-
+      margin-right: auto;
+      opacity: 90%;
+     
       @include respond(tab-port) {
         margin-bottom: 1.8rem;
       }
       &-sicura {
+
+        font-size: 1.6rem;
+        line-height: 1.8rem;
+        margin-right: 5rem;
+        font-weight: 400;
         @include respond(tab-port) {
           font-size: 1.6rem;
           line-height: 1.8rem;
@@ -142,6 +211,10 @@
       }
 
       &-privacy {
+        
+        font-size: 1.6rem;
+        line-height: 1.8rem;
+        font-weight: 400;
         @include respond(tab-port) {
           font-size: 1.6rem;
           line-height: 1.8rem;
@@ -151,6 +224,19 @@
 
     &__mono {
       &-designed {
+        opacity: 90%;
+        font-size: 1.6rem;
+        line-height: 1.8rem;
+        font-weight: 400;
+        @include respond(tab-port) {
+          font-size: 1.6rem;
+          line-height: 1.8rem;
+        }
+      }
+      &-span{
+        font-size: 1.6rem;
+        line-height: 1.8rem;
+        color: $color-text;
         @include respond(tab-port) {
           font-size: 1.6rem;
           line-height: 1.8rem;

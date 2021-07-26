@@ -1,45 +1,56 @@
-$color-hero-section: #2D3B56;
-$color-hero-btn: #FDAC17;
-$color-text: #FFFFFF;
-$color-middle: #F4F5F7;
-$color-history: #E5E5E5;
-$color-middle-text:#2D3B56;
-$color-history-choice:#FDAC17;
+$color-hero-section: #2d3b56;
+$color-hero-btn: #fdac17;
+$color-text: #ffffff;
+$color-middle: #f4f5f7;
+$color-history: #e5e5e5;
+$color-middle-text: #2d3b56;
+$color-history-choice: #fdac17;
 $color-label: #000000;
-$color-input: #CACACA;
+$color-input: #cacaca;
 
 *,
 *::after,
 *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
-html{
-    
-    font-size: 62.5%;
+html {
+  font-size: 62.5%;
 
-    
-    @include respond(tab-port){
-        font-size: 50%; // 1rem = 8px 8/16 = 50%
-    }
+  @include respond(tab-port) {
+    font-size: 50%; // 1rem = 8px 8/16 = 50%
+  }
 
-      
-    @include respond(tab-min){
-        font-size: 50%;; // 1rem = 8px 8/16 = 50%
-    }
-
+  @include respond(tab-min) {
+    font-size: 50%; // 1rem = 8px 8/16 = 50%
+  }
 }
 
-body{
-    box-sizing: border-box;
-    width: 100%;
-
-    font-family: 'Mulish', sans-serif;
+body {
+  box-sizing: border-box;
+  width: 100vw;
+  font-family: "Mulish", sans-serif;
 }
 
-.container{
-    width: 100%;
-    margin: 0 auto;
+.container {
+  width: 100%;
+  margin: 0 auto;
+
+  @media (min-width: 576px) {
+    max-width: 540px;
+  }
+  @media (min-width: 768px) {
+    max-width: 720px;
+  }
+  @media (min-width: 992px) {
+    max-width: 960px;
+  }
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+  @media (min-width: 1400px) {
+    max-width: 1320px;
+  }
 }

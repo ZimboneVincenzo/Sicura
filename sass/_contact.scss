@@ -34,7 +34,7 @@
 
     &__consulting {
       @include respond(tab-min) {
-        margin-right: auto;
+        margin-right: 30rem;
       }
 
       @include respond(tab-port) {
@@ -66,19 +66,20 @@
 
       &__number {
         display: flex;
-        justify-content: space-between;
+        //justify-content: space-between;
         font-size: 1.8rem;
         line-height: 3.2rem;
        
      
         @include respond(tab-port) {
-          width: 80%;
+          width: 100%;
         }
         &-n {
           color: $color-history-choice;
           font-weight: 700;
-          &:not(last-child){
-            margin-right: 4rem;
+        
+          &:not(:last-child){
+            margin-right: 2rem;
           }
           @include respond(tab-port) {
             font-size: 2rem;

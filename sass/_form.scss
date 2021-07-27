@@ -102,6 +102,12 @@
           flex-direction: column;
           margin-bottom: 5.5rem;
 
+          @media (min-width: 900px) {
+            margin-right: 10px;
+
+            
+          }
+         
           &-label {
             color: $color-label;
             opacity: 50%;

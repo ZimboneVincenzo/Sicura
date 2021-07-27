@@ -12,13 +12,24 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 10.6rem;
-    width: 80%;
+    width: 100%;
+ 
     //margin-right: 30rem;
-    @include respond(tab-port) {
+
+    @include respond(phone) {
       flex-direction: column;
+    }
+
+
+    @include respond(tab-port) {
+      //flex-direction: column;
       margin-bottom: 7.5rem;
+      flex-wrap: wrap;
     }
     &__logo {
+      @include respond(tab-port) {
+       width: 50%;
+      }
       &-img {
         width: 20rem;
         height: auto;
@@ -31,6 +42,9 @@
     }
 
     &__agency {
+      @include respond(tab-port) {
+        width: 50%;
+       }
       color: $color-text;
       opacity: 90%;
       padding-top: 1.2rem;
@@ -40,7 +54,7 @@
 
 
       &-title {
-     
+       
         font-size: 1.7rem;
         line-height: 2.1rem;
         margin-bottom: 1.8rem;
@@ -50,6 +64,7 @@
           font-size: 1.7rem;
           line-height: 2.1rem;
           margin-bottom: 1.8rem;
+        
         }
       }
 
@@ -104,6 +119,7 @@
       padding-top: 1.2rem;
       @include respond(tab-port) {
         margin-bottom: 5rem;
+        width: 50%;
       }
 
       &-title {
@@ -144,6 +160,7 @@
       padding-top: 1.2rem;
       @include respond(tab-port) {
         margin-bottom: 7.5rem;
+        width: 50%;
       }
 
       &-title {
@@ -188,7 +205,7 @@
     color: $color-text;
     display: flex;
    
-    @include respond(tab-port) {
+    @include respond(phone) {
       flex-direction: column;
     }
 

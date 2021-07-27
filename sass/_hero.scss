@@ -145,12 +145,16 @@
       padding: 5rem;
       margin-top: 10rem;
 
+     
       @include respond(tab-port) {
         transform: translateY(70%);
         align-items: center;
         flex-direction: column;
         padding: 4rem 0;
       }
+
+      
+
 
       &-text {
         color: $color-middle-text;
@@ -183,7 +187,9 @@
           justify-content: space-evenly;
           align-items: center;
         }
-
+        @media (min-width: 768px) {
+          flex-direction: row;
+        }
         &-1 {
           width: 14rem;
           height: auto;
@@ -208,6 +214,7 @@
           @include respond(tab-port) {
             width: 15rem;
             height: auto;
+            padding-bottom: 6.25rem;
           }
         }
       }

@@ -1,16 +1,27 @@
 .history {
   background-color: $color-text;
-  //display: flex;
-
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(4, min-content);
+ 
+  padding: 6rem 0;
+  
 
   @media (min-width: 900px) {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    padding: 6rem 20rem;
   }
+
+  
+
+  &__grid{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, min-content);
+  
+    @media (min-width: 900px) {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: repeat(2, min-content);
+    }
+
+
 
   &__text {
     color: $color-middle-text;
@@ -23,15 +34,24 @@
     flex-direction: column;
 
     @media (min-width: 900px) {
-      grid-column: 1 / 5;
+      grid-column: 1 / 6;
       grid-row: 1 / 2;
+      padding-top: 20rem;
+    }
+
+    @media (min-width: 1100px) {
+      padding-top: 26rem;
+    }
+
+    @media (min-width:1200px) {
+      padding-top: 30rem;
     }
 
     &-title {
       font-size: 3.5rem;
       line-height: 4.9rem;
       padding-bottom: 4rem;
-      //font-weight: 600;
+
       @include respond(tab-port) {
         font-size: 2.8rem;
         line-height: 3.6rem;
@@ -72,16 +92,18 @@
   &__img {
     grid-column: 1 / -1;
     grid-row: 2 / 3;
+    padding: 6rem 0;
+    
 
     @media (min-width: 900px) {
       grid-column: 6 / -1;
       grid-row: 1 / 2;
- 
+      transform: translateX(130px);
     }
 
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(8, 1fr);
+    grid-template-rows: repeat(8, min-content);
     grid-column-gap: 2rem;
     grid-row-gap: 3rem;
 
@@ -89,43 +111,43 @@
       grid-column: 1 / 4;
       grid-row: 3 / 7;
 
-      width: 100%;
-      height: auto;
+      //width: 100%;
+     //height: auto;
     }
 
     &-2 {
       grid-column: 4 / -1;
       grid-row: 2 / 4;
 
-      width: 100%;
-      height: auto;
+     // width: 100%;
+     // height: auto;
 
       @include respond(tab-port) {
-        width: 100%;
-        height: auto;
+        //width: 100%;
+       // height: auto;
       }
     }
 
     &-3 {
       grid-column: 4 / -1;
       grid-row: 4 / -1;
-      object-fit: contain;
+     // object-fit: contain;
 
       @media (min-width: 900px) {
         display: none;
       }
 
-      width: 100%;
-      height: auto;
+     // width: 100%;
+    // height: auto;
     }
 
     &-4 {
       @media (min-width: 900px) {
         grid-column: 4 / 6;
         grid-row: 4 / -1;
-        object-fit: contain;
-        width: 100%;
-        height: auto;
+        //object-fit: contain;
+       // width: 100%;
+       // height: auto;
       }
 
       @include respond(tab-port) {
@@ -225,4 +247,5 @@
       }
     }
   }
+}
 }

@@ -26,6 +26,16 @@
       margin-bottom: 7.5rem;
       flex-wrap: wrap;
     }
+
+    @media (min-width: 900px) {
+     width: 100%;
+    }
+
+    @media (min-width: 1200px) {
+      width: 80%;
+     }
+
+
     &__logo {
       @include respond(tab-port) {
        width: 50%;

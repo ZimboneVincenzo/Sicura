@@ -11,7 +11,7 @@
     justify-content: space-between;
     align-items: center;
 
-    margin-bottom: 19rem;
+    margin-bottom: 5rem;
 
     @include respond(tab-port) {
       justify-content: space-between;
@@ -136,29 +136,58 @@
     }
   }
 
+
   &__middle {
+    display: flex;
+    flex-direction: column;
+   margin-top: 10rem;
+   height: 15rem;
+  
+    &__icon{
+
+      align-self: center;
+      margin-bottom: 3.1rem;
+
+      @media (min-width: 900px) {
+        margin-bottom: 4.1rem;
+      }
+
+
+    }
     &__logobar {
+
+      ul{
+
+        li{
+          list-style: none;
+        }
+        
+      }
+
+
+      width: 100%;
       background-color: $color-middle;
-      transform: translateY(50%);
+      @media (min-width: 900px) {
+        transform: translateY(5%);
+      }
+   
       display: flex;
       align-items: center;
       padding: 5rem;
-      margin-top: 10rem;
+     
 
      
       @include respond(tab-port) {
-        transform: translateY(70%);
+        //transform: translateY(70%);
         align-items: center;
         flex-direction: column;
         padding: 4rem 0;
       }
 
-      
-
 
       &-text {
         color: $color-middle-text;
-        font-size: 1.8rem;
+        font-size: 2.2rem;
         line-height: 2.2rem;
         //font-weight: 600;
 
@@ -178,8 +207,10 @@
       }
 
       &__icon {
+
+      
         display: flex;
-        width: 70%;
+        width: 65%;
         justify-content: space-between;
 
         @include respond(tab-port) {
@@ -189,31 +220,46 @@
         }
         @media (min-width: 768px) {
           flex-direction: row;
+          width: 100%;
+        }
+
+        @media (min-width: 900px) {
+          flex-direction: row;
+          width: 65%;
         }
         &-1 {
-          width: 14rem;
-          height: auto;
+          display: flex;
+          justify-content: center;
+         // width: 14rem;
+          //height: auto;
           @include respond(tab-port) {
-            width: 15rem;
-            height: auto;
+            //width: 15rem;
+            //height: auto;
             padding-bottom: 6.25rem;
           }
         }
         &-2 {
-          width: 14rem;
-          height: auto;
+          display: flex;
+          justify-content: center;
+          //width: 14rem;
+          //height: auto;
           @include respond(tab-port) {
-            width: 15rem;
-            height: auto;
+            //width: 15rem;
+            //height: auto;
             padding-bottom: 6.25rem;
           }
         }
         &-3 {
-          width: 14.5rem;
-          height: auto;
+          display: flex;
+          justify-content: center;
+          @media (min-width: 900px) {
+           padding-top: 1.8rem;
+          }
+          //width: 14rem;
+          //height: auto;
           @include respond(tab-port) {
-            width: 15rem;
-            height: auto;
+            //width: 15rem;
+            //height: auto;
             padding-bottom: 6.25rem;
           }
         }

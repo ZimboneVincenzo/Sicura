@@ -1,94 +1,189 @@
 .history {
   background-color: $color-text;
- 
+
   padding: 6rem 0;
-  
 
   @media (min-width: 900px) {
-    padding: 6rem 20rem;
+    padding: 18.7rem 20rem;
   }
 
-  
-
-  &__grid{
+  &__grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(4, min-content);
-  
+
     @media (min-width: 900px) {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
       grid-template-rows: repeat(2, min-content);
-    }
-
-
-
-  &__text {
-    color: $color-middle-text;
-    grid-column: 1 / -1;
-    grid-row: 1 / 2;
-
-    display: flex;
-    padding-top: 40rem;
-    padding-bottom: 3rem;
-    flex-direction: column;
-
-    @media (min-width: 900px) {
-      grid-column: 1 / 6;
-      grid-row: 1 / 2;
-      padding-top: 20rem;
+      grid-row-gap: 15rem;
     }
 
     @media (min-width: 1100px) {
-      padding-top: 26rem;
+      grid-row-gap: 18rem;
     }
 
-    @media (min-width:1200px) {
-      padding-top: 30rem;
-    }
+    &__text {
+      color: $color-middle-text;
+      grid-column: 1 / -1;
+      grid-row: 1 / 2;
 
-    &-title {
-      font-size: 3.5rem;
-      line-height: 4.9rem;
-      padding-bottom: 4rem;
+      display: flex;
+      padding-top: 45rem;
+      padding-bottom: 3rem;
+      flex-direction: column;
 
-      @include respond(tab-port) {
-        font-size: 2.8rem;
-        line-height: 3.6rem;
-        padding-bottom: 3rem;
+      @media (min-width: 768px) {
+        padding-top: 30rem;
       }
-    }
 
-    &__paragraph {
-      &-1 {
-        font-size: 1.7rem;
-        line-height: 2.8rem;
+      @media (min-width: 900px) {
+        grid-column: 1 / 6;
+        grid-row: 1 / 2;
+        padding-top: 20rem;
+      }
 
-        padding-bottom: 2.8rem;
-        opacity: 80%;
+      @media (min-width: 1100px) {
+        padding-top: 26rem;
+      }
+
+      @media (min-width: 1200px) {
+        padding-top: 24rem;
+      }
+
+      &-title {
+        font-size: 3.5rem;
+        line-height: 4.9rem;
+        padding-bottom: 4rem;
 
         @include respond(tab-port) {
-          font-size: 2rem;
-          line-height: 3.2rem;
+          font-size: 2.8rem;
+          line-height: 3.6rem;
           padding-bottom: 3rem;
         }
       }
 
-      &-2 {
-        font-size: 1.7rem;
-        line-height: 2.8rem;
-        padding-bottom: 2.8rem;
-        opacity: 80%;
+      &__paragraph {
+        &-1 {
+          font-size: 1.7rem;
+          line-height: 2.8rem;
 
-        @include respond(tab-port) {
-          font-size: 2rem;
-          line-height: 3.2rem;
-          padding-bottom: 3rem;
+          padding-bottom: 2.8rem;
+          opacity: 80%;
+
+          @include respond(tab-port) {
+            font-size: 2rem;
+            line-height: 3.2rem;
+            padding-bottom: 3rem;
+          }
+        }
+
+        &-2 {
+          font-size: 1.7rem;
+          line-height: 2.8rem;
+          padding-bottom: 2.8rem;
+          opacity: 80%;
+
+          @include respond(tab-port) {
+            font-size: 2rem;
+            line-height: 3.2rem;
+            padding-bottom: 3rem;
+          }
         }
       }
     }
-  }
 
+    &__img {
+      grid-column: 1 / -1;
+      grid-row: 2 / 3;
+      padding: 6rem 0;
+
+      justify-self: center;
+
+      @media (min-width: 900px) {
+        grid-column: 6 / -1;
+        grid-row: 1 / 2;
+        transform: translateX(130px);
+
+        justify-self: end;
+      }
+
+      &__container {
+        display: flex;
+
+        font-size: 6px;
+
+        @media (min-width: 1100px) {
+          font-size: 8px;
+        }
+
+        &__p1 {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          margin-right: 2em;
+
+          &__div {
+            width: 27em;
+            height: 37.7em;
+
+            &-1 {
+              width: 100%;
+              height: auto;
+              border-radius: 2.6px;
+              @media (min-width: 900px) {
+                border-radius: 0;
+              }
+            }
+          }
+        }
+
+        &__pictures {
+          &__p2 {
+            width: 34.2em;
+            height: 27.4em;
+            &-2 {
+              width: 100%;
+              height: auto;
+              border-radius: 2.6px;
+
+              @media (min-width: 900px) {
+                border-radius: 0;
+              }
+            }
+          }
+
+          &__group {
+            width: 29.1em;
+            height: 40.3em;
+
+            &-3 {
+              width: 100%;
+              height: auto;
+              border-radius: 2.6px;
+
+              @media (min-width: 900px) {
+                display: none;
+              }
+            }
+
+            &-4 {
+              @media (min-width: 900px) {
+                //object-fit: contain;
+                width: 100%;
+                height: auto;
+              }
+
+              @include respond(tab-port) {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    /*
   &__img {
     grid-column: 1 / -1;
     grid-row: 2 / 3;
@@ -141,111 +236,100 @@
     // height: auto;
     }
 
-    &-4 {
-      @media (min-width: 900px) {
-        grid-column: 4 / 6;
-        grid-row: 4 / -1;
-        //object-fit: contain;
-       // width: 100%;
-       // height: auto;
-      }
-
-      @include respond(tab-port) {
-        display: none;
-      }
-    }
+   p
   }
 
-  &__service {
-    &__title {
-      grid-column: 1 / -1;
-      grid-row: 3 / 4;
+  */
 
-      @media (min-width: 900px) {
-        grid-column: 1 / 5;
-        grid-row: 2 / -1;
-      }
+    &__service {
+      &__title {
+        grid-column: 1 / -1;
+        grid-row: 3 / 4;
 
-      &-text {
-        color: $color-middle-text;
-        font-size: 3.5rem;
-        line-height: 4.3rem;
-      }
+        @media (min-width: 900px) {
+          grid-column: 1 / 5;
+          grid-row: 2 / -1;
+        }
 
-      @include respond(tab-port) {
-        font-size: 2.8rem;
-        line-height: 3.6rem;
-        padding-bottom: 4rem;
-      }
-    }
-
-    &__type {
-      grid-column: 1 / -1;
-      grid-row: 4 / -1;
-
-      @media (min-width: 900px) {
-        grid-column: 6 / -1;
-        grid-row: 2 / -1;
-      }
-
-      &__insurance {
-        display: flex;
-        margin-bottom: 5rem;
+        &-text {
+          color: $color-middle-text;
+          font-size: 3.5rem;
+          line-height: 4.3rem;
+        }
 
         @include respond(tab-port) {
-          flex-direction: column;
-          margin-bottom: 6rem;
+          font-size: 2.8rem;
+          line-height: 3.6rem;
+          padding-bottom: 4rem;
+        }
+      }
+
+      &__type {
+        grid-column: 1 / -1;
+        grid-row: 4 / -1;
+
+        @media (min-width: 900px) {
+          grid-column: 6 / -1;
+          grid-row: 2 / -1;
         }
 
-        &__logo {
-          width: 6.2rem;
-          height: 6.2rem;
-          flex-basis: 6.2rem;
-          flex: 1 0 auto;
-          border-radius: 1.6rem;
-          background-color: rgba(0, 0, 0, 0.1);
+        &__insurance {
           display: flex;
-          justify-content: center;
-          align-items: center;
-          margin-bottom: 2rem;
+          margin-bottom: 5rem;
 
-          @include respond(tab-min) {
-            margin-right: 6.2rem;
+          @include respond(tab-port) {
+            flex-direction: column;
+            margin-bottom: 6rem;
           }
 
-          &-icon {
-            width: 3.8rem;
-            height: 3rem;
-          }
-        }
+          &__logo {
+            width: 6.2rem;
+            height: 6.2rem;
+            flex-basis: 6.2rem;
+            flex: 1 0 auto;
+            border-radius: 1.6rem;
+            background-color: rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 2rem;
 
-        &__text {
-          color: $color-middle-text;
-          &-title {
-            font-size: 2.4rem;
-            line-height: 3rem;
-            margin-bottom: 1.5rem;
+            @include respond(tab-min) {
+              margin-right: 6.2rem;
+            }
 
-            @include respond(tab-port) {
-              font-size: 2.2rem;
-              line-height: 2.8rem;
-              padding-bottom: rem;
+            &-icon {
+              width: 3.8rem;
+              height: 3rem;
             }
           }
 
-          &-paragraph {
-            font-size: 1.6rem;
-            line-height: 2.8rem;
-            //font-weight: 400;
-            opacity: 80%;
-            @include respond(tab-port) {
-              font-size: 2rem;
-              line-height: 3.2rem;
+          &__text {
+            color: $color-middle-text;
+            &-title {
+              font-size: 2.4rem;
+              line-height: 3rem;
+              margin-bottom: 1.5rem;
+
+              @include respond(tab-port) {
+                font-size: 2.2rem;
+                line-height: 2.8rem;
+                padding-bottom: rem;
+              }
+            }
+
+            &-paragraph {
+              font-size: 1.6rem;
+              line-height: 2.8rem;
+              opacity: 80%;
+              @include respond(tab-port) {
+                font-size: 2rem;
+                line-height: 3.2rem;
+              }
             }
           }
         }
       }
     }
   }
-}
 }

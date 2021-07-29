@@ -13,32 +13,27 @@
     justify-content: space-between;
     margin-bottom: 10.6rem;
     width: 100%;
- 
-    //margin-right: 30rem;
 
     @include respond(phone) {
       flex-direction: column;
     }
 
-
     @include respond(tab-port) {
-      //flex-direction: column;
       margin-bottom: 7.5rem;
       flex-wrap: wrap;
     }
 
     @media (min-width: 900px) {
-     width: 100%;
+      width: 100%;
     }
 
     @media (min-width: 1200px) {
       width: 80%;
-     }
-
+    }
 
     &__logo {
       @include respond(tab-port) {
-       width: 50%;
+        width: 50%;
       }
       &-img {
         width: 20rem;
@@ -54,7 +49,7 @@
     &__agency {
       @include respond(tab-port) {
         width: 50%;
-       }
+      }
       color: $color-text;
       opacity: 90%;
       padding-top: 1.2rem;
@@ -62,19 +57,15 @@
         margin-bottom: 5rem;
       }
 
-
       &-title {
-       
         font-size: 1.7rem;
         line-height: 2.1rem;
         margin-bottom: 1.8rem;
-        //font-weight: 700;
 
         @include respond(tab-port) {
           font-size: 1.7rem;
           line-height: 2.1rem;
           margin-bottom: 1.8rem;
-        
         }
       }
 
@@ -82,7 +73,7 @@
         &-road {
           font-size: 1.75rem;
           line-height: 3.5rem;
-          //font-weight: 400;
+
           @include respond(tab-port) {
             font-size: 1.75rem;
             line-height: 2.5rem;
@@ -92,7 +83,7 @@
           font-size: 1.75rem;
           line-height: 3.5rem;
           margin-bottom: 1.8rem;
-          //font-weight: 400;
+
           @include respond(tab-port) {
             font-size: 1.75rem;
             line-height: 2.5rem;
@@ -105,7 +96,7 @@
         &-open {
           font-size: 1.8rem;
           line-height: 3.5rem;
-          //font-weight: 400;
+
           @include respond(tab-port) {
             font-size: 1.75rem;
             line-height: 2.5rem;
@@ -113,8 +104,8 @@
         }
         &-hour {
           font-size: 1.75rem;
-            line-height: 3.5rem;
-            //font-weight: 400;
+          line-height: 3.5rem;
+
           @include respond(tab-port) {
             font-size: 1.75rem;
             line-height: 2.5rem;
@@ -136,7 +127,7 @@
         font-size: 1.75rem;
         line-height: 2.1rem;
         margin-bottom: 1.8rem;
-        //font-weight: 700;
+
         @include respond(tab-port) {
           font-size: 1.75rem;
           line-height: 2.1rem;
@@ -147,7 +138,7 @@
       &-number {
         font-size: 1.75rem;
         line-height: 2.5rem;
-        //font-weight: 400;
+
         @include respond(tab-port) {
           font-size: 1.75rem;
           line-height: 2.5rem;
@@ -156,8 +147,8 @@
 
       &-mail {
         font-size: 1.75rem;
-          line-height: 2.5rem;
-         //font-weight: 400;
+        line-height: 2.5rem;
+
         @include respond(tab-port) {
           font-size: 1.75rem;
           line-height: 2.5rem;
@@ -166,7 +157,6 @@
     }
 
     &__follow {
-     
       padding-top: 1.2rem;
       @include respond(tab-port) {
         margin-bottom: 7.5rem;
@@ -176,10 +166,10 @@
       &-title {
         color: $color-text;
         font-size: 1.75rem;
-          line-height: 2.1rem;
-          margin-bottom: 1.8rem;
-          //font-weight: 700;
-          opacity: 90%;
+        line-height: 2.1rem;
+        margin-bottom: 1.8rem;
+
+        opacity: 90%;
         @include respond(tab-port) {
           font-size: 1.75rem;
           line-height: 2.1rem;
@@ -214,7 +204,7 @@
   &__policy {
     color: $color-text;
     display: flex;
-   
+
     @include respond(phone) {
       flex-direction: column;
     }
@@ -223,16 +213,15 @@
       display: flex;
       margin-right: auto;
       opacity: 90%;
-     
+
       @include respond(tab-port) {
         margin-bottom: 1.8rem;
       }
       &-sicura {
-
         font-size: 1.6rem;
         line-height: 1.8rem;
         margin-right: 5rem;
-        //font-weight: 400;
+
         @include respond(tab-port) {
           font-size: 1.6rem;
           line-height: 1.8rem;
@@ -241,10 +230,9 @@
       }
 
       &-privacy {
-        
         font-size: 1.6rem;
         line-height: 1.8rem;
-        //font-weight: 400;
+
         @include respond(tab-port) {
           font-size: 1.6rem;
           line-height: 1.8rem;
@@ -257,13 +245,13 @@
         opacity: 90%;
         font-size: 1.6rem;
         line-height: 1.8rem;
-        //font-weight: 400;
+
         @include respond(tab-port) {
           font-size: 1.6rem;
           line-height: 1.8rem;
         }
       }
-      &-span{
+      &-span {
         font-size: 1.6rem;
         line-height: 1.8rem;
         color: $color-text;
